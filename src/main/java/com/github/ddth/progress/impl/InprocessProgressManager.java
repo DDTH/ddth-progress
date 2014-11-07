@@ -3,10 +3,17 @@ package com.github.ddth.progress.impl;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+import com.github.ddth.progress.IProgressManager;
 import com.github.ddth.progress.ProgressRecord;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
+/**
+ * In-memory implementation of {@link IProgressManager}.
+ * 
+ * @author Thanh Nguyen <btnguyen2k@gmail.com>
+ * @since 0.1.0
+ */
 public class InprocessProgressManager extends AbstractProgressManager {
 
     private final AtomicLong counter = new AtomicLong(0);
